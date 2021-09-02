@@ -55,6 +55,7 @@ table {
     padding: 0;
     margin: 0;
     max-width: 100%;
+    max-height: 100%; /* FOR THE IMAGE IN THE TITLE SECTION*/
     border: 1px solid gray; 
 }
 html {
@@ -64,7 +65,6 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.5;
-    border: none;
 }
 section {
     /* padding: 0% 0;  DO WE WANT DEFAULT PADDING? */
@@ -85,7 +85,6 @@ span {
 
 /* HEADER */
 header {
-    border: 2px solid red;
     padding: 1%;
     background-color: #f1faee;
 }
@@ -95,29 +94,47 @@ h1 {
 nav {
     margin: 0 1%;
     padding: 1%;
-    display: flex;
+    display: flex; /* FLEX CONTAINER */
     
 }
-nav a { /* NAVINGATION BUTTONS*/
+nav a { /* Nav Buttons */
     border: 1px solid lightgray;
-    padding: 5px 20px;
+    padding: 5px 0;
+    width: 120px;
+    text-align: center;
 }
 
 
-/* SECTION TITLE */
+/* INTRO TITLE */
 .title {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     display: flex;
 }
-.title div {
+.title div { /* FLEX CONTAINER */
     border: 2px solid greenyellow;
     width: 50%;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+}
+.title div a {
+    border: 1px solid lightgray;
+    width: 120px; 
+    text-align: center;
+    padding: 5px 0;
 }
 
 /* SECTION 2 */
+.project-row {
+    display: flex;
+    justify-content: space-around;
 
+}
+.projects div div {
+    width: 200px;
+    margin: 1%;
+}
 
 /* FOOTER */
