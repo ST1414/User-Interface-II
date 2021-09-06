@@ -81,9 +81,13 @@ a {
 span {
     font-weight: bold;
 }
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
 
 
-/* HEADER */
+/* HEADER & NAVIGATION */
 header {
     padding: 1%;
     background-color: #f1faee;
@@ -116,6 +120,7 @@ nav a { /* MAIN NAV BUTTONS */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-height: 40vh;
 
 }
 .title div a { /* THINGS I BUILD LINK */
@@ -123,6 +128,9 @@ nav a { /* MAIN NAV BUTTONS */
     width: 120px; 
     text-align: center;
     padding: 5px 0;
+}
+.img-size {
+    object-fit: contain;
 }
 
 /* SECTION 2 - PROJECTS */
