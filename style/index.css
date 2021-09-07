@@ -65,6 +65,7 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.5;
+    background-color: white;
 }
 section {
     /* padding: 0% 0;  DO WE WANT DEFAULT PADDING? */
@@ -77,12 +78,18 @@ h2 {
 }
 a {
     text-decoration: none;
+    color: black;
+}
+a:hover { 
+    border: 1px solid lightgray;
+    background-color: black;
+    color: white;
 }
 span {
     font-weight: bold;
 }
 .container {
-    width: 800px;
+    /* width: 800px; */
     margin: 0 auto;
 }
 
@@ -102,8 +109,8 @@ nav {
 }
 nav a { /* MAIN NAV BUTTONS */
     border: 1px solid lightgray;
-    padding: 5px 0;
-    width: 120px;
+    padding: 1% 0;
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
     text-align: center;
 }
 
@@ -116,16 +123,15 @@ nav a { /* MAIN NAV BUTTONS */
 .title div {
     /* border: 2px solid greenyellow; */
     width: 50%;
-    padding: 1%;
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-height: 40vh;
-
 }
 .title div a { /* THINGS I BUILD LINK */
     border: 1px solid lightgray;
-    width: 120px; 
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
     text-align: center;
     padding: 5px 0;
 }
@@ -134,18 +140,19 @@ nav a { /* MAIN NAV BUTTONS */
 }
 
 /* SECTION 2 - PROJECTS */
-.project-row {
+.projects {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    /* border: 2px solid red; */
 }
-.projects div div {
-    width: 200px;
+.projects div {
+    width: 25%;
+    max-width: 350px; /* <<< DO I NEED? */
+    min-width: 255px; /* <<< DO I NEED? */
     margin: 1%;
     text-align: center;
     /* border: 2px solid orange; */
 }
-
 /* FOOTER */
 footer {
     margin: 1% 0;
@@ -162,5 +169,38 @@ footer a {
     border: 1px solid lightgray;
     text-align: center;
     margin: 0 auto;
-    width: 120px
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 800px){
+
+    /* Header & Navigation */
+    header {
+        background-color: white;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    /* Title Section & My Name */
+    .title {
+        flex-direction: column;
+        align-items: center; /* Needed to center the content horizontally (now the cross axis) */
+    }
+    .title div {
+        text-align: center;
+        align-items: center; /* Need to center the link-button inside the right Div */
+        padding: 1% 0 2%;
+        justify-content: space-evenly;
+    }
+
+}
+@media (max-width:500){
+    .projects div:nth-child(1) {
+        display:none;
+    }
 }
