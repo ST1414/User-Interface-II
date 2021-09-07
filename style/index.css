@@ -1,1 +1,206 @@
-/* Add CSS styling here */
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	/* font-size: 100%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* body {
+	line-height: 1;
+} */
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* UNIVERSAL & GENERAL */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%; /* FOR THE IMAGE IN THE TITLE SECTION*/
+    /* border: 1px solid gray;  */
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: white;
+}
+section {
+    /* padding: 0% 0;  DO WE WANT DEFAULT PADDING? */
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover { 
+    border: 1px solid lightgray;
+    background-color: black;
+    color: white;
+}
+span {
+    font-weight: bold;
+}
+.container {
+    /* width: 800px; */
+    margin: 0 auto;
+}
+
+
+/* HEADER & NAVIGATION */
+header {
+    padding: 1%;
+    background-color: #f1faee;
+}
+h1 {
+    margin: 0 1%;
+}
+nav {
+    margin: 0 1%;
+    padding: 1%;
+    display: flex; 
+}
+nav a { /* MAIN NAV BUTTONS */
+    border: 1px solid lightgray;
+    padding: 1% 0;
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
+    text-align: center;
+}
+
+
+/* SECTION 1 - TITLE */
+.title {
+    /* border: 5px solid blue; */
+    display: flex;
+}
+.title div {
+    /* border: 2px solid greenyellow; */
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 40vh;
+}
+.title div a { /* THINGS I BUILD LINK */
+    border: 1px solid lightgray;
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
+    text-align: center;
+    padding: 5px 0;
+}
+.img-size {
+    object-fit: contain;
+}
+
+/* SECTION 2 - PROJECTS */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.projects div {
+    width: 25%;
+    max-width: 350px; /* <<< DO I NEED? */
+    min-width: 255px; /* <<< DO I NEED? */
+    margin: 1%;
+    text-align: center;
+    /* border: 2px solid orange; */
+}
+/* FOOTER */
+footer {
+    margin: 1% 0;
+    padding: 1%;
+    background-color: #f1faee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer h3 {
+    text-align: center;
+}
+footer a {
+    border: 1px solid lightgray;
+    text-align: center;
+    margin: 0 auto;
+    width: 120px; /* <<<<<<<<<<<<<< Change to dynamic*/
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 800px){
+
+    /* Header & Navigation */
+    header {
+        background-color: white;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    /* Title Section & My Name */
+    .title {
+        flex-direction: column;
+        align-items: center; /* Needed to center the content horizontally (now the cross axis) */
+    }
+    .title div {
+        text-align: center;
+        align-items: center; /* Need to center the link-button inside the right Div */
+        padding: 1% 0 2%;
+        justify-content: space-evenly;
+    }
+
+}
+@media (max-width:500){
+    .projects div:nth-child(1) {
+        display:none;
+    }
+}
